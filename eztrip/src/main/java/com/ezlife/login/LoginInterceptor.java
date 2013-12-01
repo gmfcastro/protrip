@@ -23,11 +23,11 @@ import java.util.Collection;
 @Intercepts
 public class LoginInterceptor implements Interceptor {
 
-    private UserSession userSession;
+    private TravelerSession userSession;
     private Result result;
     private Method m;
 
-    public LoginInterceptor(UserSession userSession, Result result) {
+    public LoginInterceptor(TravelerSession userSession, Result result) {
         this.userSession = userSession;
         this.result = result;
     }

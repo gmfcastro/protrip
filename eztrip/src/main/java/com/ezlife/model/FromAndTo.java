@@ -23,7 +23,7 @@ public class FromAndTo implements Serializable{
     @Id
     @GeneratedValue
     private Long idFromandtos;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Country country;
     private String description;
 

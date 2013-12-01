@@ -24,7 +24,7 @@ public class Country implements Serializable{
     @GeneratedValue
     private Long idCountry;
     private String nameCountry;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Region region;
 
     public Long getIdCountry() {

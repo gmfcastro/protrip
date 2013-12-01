@@ -8,7 +8,7 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import com.ezlife.login.Public;
-import com.ezlife.login.UserSession;
+import com.ezlife.login.TravelerSession;
 
 /**
  *
@@ -19,21 +19,21 @@ import com.ezlife.login.UserSession;
 public class LoginController {
     
     private Result result;
-    private UserSession userSession;
+    private TravelerSession userSession;
     
-    public LoginController(Result result, UserSession userSession){
+    public LoginController(Result result, TravelerSession userSession){
         this.result = result;
         this.userSession = userSession;
     }
     
     @Path("/register")
     public void register(){
-        result.include("session", userSession.getUser());
+        result.include("session", userSession.getTraveler());
     }
     
     @Path("/login")
     public void login(){
-        result.include("session", userSession.getUser());
+        result.include("session", userSession.getTraveler());
     }
     
 }

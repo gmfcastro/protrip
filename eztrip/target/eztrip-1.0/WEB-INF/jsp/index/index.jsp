@@ -62,6 +62,9 @@
           </ul>
             <c:if test="${session!=null}">
                     <form class="navbar-form navbar-right" action='<c:url value="/logout"/>' method="POST">
+                        <div class="form-group">
+                            <h5 style="color: #ffffff;margin-right: 10px;">Olá, ${session.firstName} ${session.lastName}</h5>
+                        </div>
                         <button type='submit' class='btn btn-danger'>Logout</button>
                     </form>
             </c:if>  

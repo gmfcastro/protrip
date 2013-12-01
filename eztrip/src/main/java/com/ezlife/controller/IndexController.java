@@ -7,8 +7,9 @@ package com.ezlife.controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
+import com.ezlife.login.Permission;
 import com.ezlife.login.Public;
-import com.ezlife.login.UserSession;
+import com.ezlife.login.TravelerSession;
 
 /**
  *
@@ -19,16 +20,20 @@ import com.ezlife.login.UserSession;
 public class IndexController {
     
     private Result result;
-    private UserSession userSession;
+    private TravelerSession userSession;
     
-    public IndexController(Result result, UserSession userSession){
+    public IndexController(Result result, TravelerSession userSession){
         this.result = result;
         this.userSession = userSession;
     }
     
     @Path("/")
     public void index(){
-       result.include("session", userSession.getUser());
+       result.include("session", userSession.getTraveler());
+    }
+    
+    @Path("/admin")
+    public void admin(){
     }
     
 }

@@ -9,7 +9,7 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import com.ezlife.dao.TravelDAO;
 import com.ezlife.login.Permission;
-import com.ezlife.login.UserSession;
+import com.ezlife.login.TravelerSession;
 import com.ezlife.model.Travel;
 import com.ezlife.model.UserRoles;
 import java.util.List;
@@ -25,9 +25,9 @@ public class TravelController{
     
     private Result result;
     private TravelDAO dao;
-    private UserSession userSession;
+    private TravelerSession userSession;
     
-    public TravelController(Result result, TravelDAO dao, UserSession userSession){
+    public TravelController(Result result, TravelDAO dao, TravelerSession userSession){
         this.result = result;
         this.dao = dao;
         this.userSession = userSession;
@@ -35,9 +35,9 @@ public class TravelController{
     
     @Path("")
     public void list(){
-        List<Travel> list = dao.findAll();
+        List<Travel> list = dao.findMyTravels(userSession.getTraveler());
         result.include("viagens", list);
-        result.include("session", userSession.getUser());
+        result.include("session", userSession.getTraveler());
     }
     
 }
