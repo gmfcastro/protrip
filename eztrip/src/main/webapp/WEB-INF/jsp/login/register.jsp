@@ -54,7 +54,12 @@
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="<c:url value='/'/>">Home</a></li>
-                    <li class="active"><a href="#">Registrar</a></li>
+                    <c:if test='${session == null}'>
+                      <li class='active'><a href="<c:url value='/register'/>">Registrar</a></li>
+                    </c:if>
+                    <c:if test='${session!=null}'>
+                        <li><a href="<c:url value='/travel'/>">Viagens</a></li>
+                    </c:if>   
                 </ul>
                 <c:if test="${session!=null}">
                         <form class="navbar-form navbar-right" action='<c:url value="/logout"/>' method="POST">
