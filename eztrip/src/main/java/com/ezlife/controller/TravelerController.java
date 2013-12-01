@@ -9,6 +9,7 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import com.ezlife.dao.TravelerDAO;
+import com.ezlife.login.Public;
 import com.ezlife.model.Traveler;
 import com.ezlife.model.UserRoles;
 import java.util.Date;
@@ -18,6 +19,7 @@ import java.util.Date;
  * @author guilherme
  */
 @Resource
+@Public
 @Path("/traveler")
 public class TravelerController {
     
@@ -56,12 +58,6 @@ public class TravelerController {
            result.redirectTo(LoginController.class).register();
         } 
      }
-    
-    @Post
-    public void authenticate(String email, String password){
-        
-        
-    }
     
     @Path("/remove/{id}")
     public void remove(Long id){

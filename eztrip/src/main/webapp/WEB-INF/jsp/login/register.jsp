@@ -8,6 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -55,15 +56,22 @@
                     <li><a href="<c:url value='/'/>">Home</a></li>
                     <li class="active"><a href="#">Registrar</a></li>
                 </ul>
-                <form class="navbar-form navbar-right">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-                  <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
+                <c:if test="${session!=null}">
+                        <form class="navbar-form navbar-right" action='<c:url value="/logout"/>' method="POST">
+                            <button type='submit' class='btn btn-danger'>Logout</button>
+                        </form>
+                </c:if> 
+                <c:if test="${session==null}">
+                <form class="navbar-form navbar-right" action='<c:url value="/authenticate"/>' method="POST">
+                    <div class="form-group">
+                      <input type="text" placeholder="Email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" placeholder="Password" name="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Login</button>
+                  </form>
+                 </c:if>
               </div><!--/.navbar-collapse -->
             </div>
           </div>
