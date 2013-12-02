@@ -91,7 +91,7 @@
                     <h1>Minhas viagens</h1>
                 </div>
                 <div class="col-md-2 pull-right">
-                    <button class='btn btn-lg btn-primary' href="<c:url value='/travel/add'/>" style="margin-top: 20px;">+ Nova viagem</button>
+                    <a class='btn btn-lg btn-primary' href="<c:url value='/travel/add'/>" style="margin-top: 20px;">+ Nova viagem</a>
                 </div>
             </div>
             <hr>
@@ -101,17 +101,16 @@
                 <th>Destino</th>
                 <th>Ida</th>
                 <th>Volta</th>
-                <th><fmt:message key="label.user.email" /></th>
-                <th><fmt:message key="label.user.enable"/></th>
             </tr>
             <c:forEach items="${viagens}" var="viagem">
                 <tr>
-                    <td>${viagem.fromCity}</td>
-                    <td>${viagem.toCity}</td>
+                    <td>${viagem.fromCity.name}</td>
+                    <td>${viagem.toCity.name}</td>
                     <td>${viagem.dateGo}</td>
-                    <td>${customers.dateBack}</td>
-                    <td><a href="<c:url value="/admin/customer/edit/${customers.id}" />"><fmt:message key="label.customer.edit" /></a></td>
-                    <td><a href="<c:url value="/admin/customer/remove/${customers.id}" />"><fmt:message key="label.customer.delete" /></a></td> 
+                    <td>${viagem.dateBack}</td>
+                    <td><a class='btn btn-success' href="<c:url value='/travel/explore/${viagem.id}' />">Explorar</a></td>
+                    <td><a class='btn btn-primary' href="<c:url value='/travel/edit/${viagem.id}' />">Editar</a></td>
+                    <td><a class='btn btn-danger' href="<c:url value='/travel/remove/${viagem.id}' />">Remover</a></td> 
                 </tr>
             </c:forEach>
             </table><br/>

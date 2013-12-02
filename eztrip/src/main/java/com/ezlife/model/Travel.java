@@ -5,6 +5,8 @@
 package com.ezlife.model;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.faces.bean.CustomScoped;
 import javax.persistence.CascadeType;
@@ -27,9 +29,9 @@ public class Travel implements Serializable{
     @Id
     @GeneratedValue
     private Long id;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Fromandto fromCity;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Fromandto toCity;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateGo;
@@ -74,6 +76,22 @@ public class Travel implements Serializable{
 
     public void setDateBack(Date dateBack) {
         this.dateBack = dateBack;
+    }
+    
+    public String getDataIdaFormatada(){
+        return new SimpleDateFormat("yyyy-MM-dd").format(this.dateGo);
+    }
+    
+    public void setDataIdaFormatada(String dateGo) throws ParseException{
+        this.dateGo = new SimpleDateFormat("yyyy-MM-dd").parse(dateGo);
+    }
+    
+    public String getDataVoltaFormatada(){
+        return new SimpleDateFormat("yyyy-MM-dd").format(this.dateBack);
+    }
+    
+    public void setDataVoltaFormatada(String dateBack) throws ParseException{
+        this.dateBack = new SimpleDateFormat("yyyy-MM-dd").parse(dateBack);
     }
     
 }

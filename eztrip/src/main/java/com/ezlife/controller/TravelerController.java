@@ -59,6 +59,11 @@ public class TravelerController {
         } 
      }
     
+    @Post("/savetravel")
+    public void saveTravel(){
+        
+    }
+    
     @Path("/remove/{id}")
     public void remove(Long id){
         

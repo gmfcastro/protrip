@@ -52,6 +52,11 @@ public class GenericDAO<T> {
         session.delete(obj);
         tx.commit();
     }
+    
+    public void flush(){
+        session.flush();
+        session.clear();
+    }
 
     @SuppressWarnings("unchecked")
     public T findById(long id) {
