@@ -9,7 +9,7 @@
     <property name="hibernate.connection.password">admin</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="com.ezlife.model.Country"/>
-    <mapping class="com.ezlife.model.FromAndTo"/>
+    <mapping class="com.ezlife.model.Fromandto"/>
     <mapping class="com.ezlife.model.Region"/>
     <mapping class="com.ezlife.model.Travel"/>
     <mapping class="com.ezlife.model.Traveler"/>

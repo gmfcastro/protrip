@@ -28,9 +28,9 @@ public class Travel implements Serializable{
     @GeneratedValue
     private Long id;
     @ManyToOne(cascade = CascadeType.ALL)
-    private FromAndTo fromCity;
+    private Fromandto fromCity;
     @ManyToOne(cascade = CascadeType.ALL)
-    private FromAndTo toCity;
+    private Fromandto toCity;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateGo;
     @Temporal(javax.persistence.TemporalType.DATE)
@@ -44,19 +44,19 @@ public class Travel implements Serializable{
         this.id = id;
     }
 
-    public FromAndTo getFromCity() {
+    public Fromandto getFromCity() {
         return fromCity;
     }
 
-    public void setFromCity(FromAndTo fromCity) {
+    public void setFromCity(Fromandto fromCity) {
         this.fromCity = fromCity;
     }
 
-    public FromAndTo getToCity() {
+    public Fromandto getToCity() {
         return toCity;
     }
 
-    public void setToCity(FromAndTo toCity) {
+    public void setToCity(Fromandto toCity) {
         this.toCity = toCity;
     }
 

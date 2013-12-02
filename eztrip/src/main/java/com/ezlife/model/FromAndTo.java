@@ -18,11 +18,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="fromandtos")
-public class FromAndTo implements Serializable{
+public class Fromandto implements Serializable{
     
     @Id
     @GeneratedValue
     private Long id;
+    private String name;
     @ManyToOne
     private Country country;
     private String description;
@@ -49,5 +50,15 @@ public class FromAndTo implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
-    } 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    
 }
