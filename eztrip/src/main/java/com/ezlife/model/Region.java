@@ -20,15 +20,15 @@ public class Region implements Serializable{
     
     @Id
     @GeneratedValue
-    private Long idRegion;
+    private Long id;
     private String nameRegion;
 
-    public Long getIdRegion() {
-        return idRegion;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdRegion(Long idRegion) {
-        this.idRegion = idRegion;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNameRegion() {

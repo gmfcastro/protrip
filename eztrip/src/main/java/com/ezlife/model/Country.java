@@ -22,17 +22,17 @@ public class Country implements Serializable{
     
     @Id
     @GeneratedValue
-    private Long idCountry;
+    private Long id;
     private String nameCountry;
     @ManyToOne
     private Region region;
 
-    public Long getIdCountry() {
-        return idCountry;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdCountry(Long idCountry) {
-        this.idCountry = idCountry;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNameCountry() {

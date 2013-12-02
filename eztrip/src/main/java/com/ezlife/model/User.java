@@ -23,7 +23,7 @@ public class User implements Serializable{
     
     @Id
     @GeneratedValue
-    private Long idUser;
+    private Long id;
     private String email;
     private String password;
     @Enumerated
@@ -31,12 +31,12 @@ public class User implements Serializable{
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date lastAcesss;
 
-    public Long getIdUser() {
-        return idUser;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEmail() {

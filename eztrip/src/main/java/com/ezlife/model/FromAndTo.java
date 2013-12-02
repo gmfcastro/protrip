@@ -22,17 +22,17 @@ public class FromAndTo implements Serializable{
     
     @Id
     @GeneratedValue
-    private Long idFromandtos;
+    private Long id;
     @ManyToOne
     private Country country;
     private String description;
 
-    public Long getIdFromandtos() {
-        return idFromandtos;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdFromandtos(Long idFromandtos) {
-        this.idFromandtos = idFromandtos;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Country getCountry() {

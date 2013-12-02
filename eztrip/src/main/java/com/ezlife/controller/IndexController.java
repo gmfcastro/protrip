@@ -10,6 +10,7 @@ import br.com.caelum.vraptor.Result;
 import com.ezlife.login.Permission;
 import com.ezlife.login.Public;
 import com.ezlife.login.TravelerSession;
+import com.ezlife.model.UserRoles;
 
 /**
  *
@@ -32,8 +33,25 @@ public class IndexController {
        result.include("session", userSession.getTraveler());
     }
     
-    @Path("/admin")
-    public void admin(){
+    @Path("/admin/login")
+    public void adminLogin(){
+        if(userSession.getTraveler()!=null){
+            if(userSession.getUser().getUserRole() == UserRoles.ADMIN){
+                result.redirectTo(IndexController.class).admin();
+            }
+        }
     }
     
+    @Path("/admin")
+    public void admin(){
+        if(userSession.getTraveler()==null){
+            result.redirectTo(IndexController.class).adminLogin();
+        }else{
+            if(userSession.getUser().getUserRole() == UserRoles.ADMIN){
+                
+            }else{
+                result.redirectTo(IndexController.class).adminLogin();
+            }      
+        }
+    }
 }
