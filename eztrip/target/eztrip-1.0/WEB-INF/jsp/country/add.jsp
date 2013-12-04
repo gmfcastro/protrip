@@ -40,7 +40,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">Admin Ez Trip</h3>
         <ul class="nav nav-justified">
           <li><a href="#">Home</a></li>
           <li><a href="<c:url value='/admin/region'/>">Regiões</a></li>
@@ -86,7 +86,7 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Eztrip.co 2013</p>
       </div>
 
     </div> <!-- /container -->

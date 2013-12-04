@@ -49,7 +49,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">Ez Trip</a>
               </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -119,7 +119,7 @@
          <div class="container">
             <hr>
             <footer>
-                <p>&copy; Company 2013</p>
+                <p>&copy; Eztrip.co 2013</p>
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

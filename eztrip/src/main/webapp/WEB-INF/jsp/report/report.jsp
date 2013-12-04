@@ -39,7 +39,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">Admin Ez Trip</h3>
         <ul class="nav nav-justified">
           <li><a href="<c:url value='/admin'/>">Home</a></li>
           <li><a href="<c:url value='/admin/region'/>">Regiões</a></li>
@@ -57,17 +57,17 @@
             <hr>
             <div class="row">
             <div class="col-md-4">
-              <h2>Destinos mais procurados</h2>
+              <h2>Destinos</h2>
               <p>Relatório com gráfico com os destinos mais procurados.</p>
               <p><a class="btn btn-default" href="<c:url value='/admin/reports/destinations'/>" role="button">Ez Report!</a></p>
             </div>
             <div class="col-md-4">
-              <h2>Mesês mais procurados</h2>
-              <p>Relatório com gráfico com os mesês onde existe mais viagens sendo realizadas.</p>
+              <h2>Origens</h2>
+              <p>Relatório com gráfico com  origens mais procuradas.</p>
               <p><a class="btn btn-default" href="<c:url value='/admin/reports/months'/>" role="button">Ez Report!</a></p>
            </div>
             <div class="col-md-4">
-              <h2>Viagens mais realizadas</h2>
+              <h2>Viagens</h2>
               <p>Relatório com os pacotes de viagens mais procurados.</p>
               <p><a class="btn btn-default" href="<c:url value='/admin/reports/travels'/>" role="button">Ez Report!</a></p>
             </div>
@@ -76,7 +76,7 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Eztrip.co 2013</p>
       </div>
 
     </div> <!-- /container -->

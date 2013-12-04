@@ -39,7 +39,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">Admin Ez Trip</h3>
         <ul class="nav nav-justified">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="<c:url value='/admin/region'/>">Regiões</a></li>
@@ -51,38 +51,36 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Marketing stuff!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+        <h1>Ez Admin!</h1>
+        <p class="lead">Controle os registros do Ez Trip com facilidade!</p>
+        <p><a class="btn btn-lg btn-success" href="http://eztrip.co" role="button">Ez Trip!</a></p>
       </div>
 
       <!-- Example row of columns -->
+      <div class='row'>
+        <h1>Ez Relatórios!</h1>
+      </div>
       <div class="row">
-        <div class="col-lg-3">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-lg-4">
+          <h2>Destinos</h2>
+          <p>Saiba quais os destinos que são mais procurados aqui!</p>
+          <p><a class="btn btn-primary" href="<c:url value='/admin/reports/destinations'/>" role="button">Ez Destinos!</a></p>
         </div>
-        <div class="col-lg-3">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-lg-4">
+          <h2>Origens</h2>
+          <p>Saiba da onde saem mais viajantes aqui!</p>
+          <p><a class="btn btn-primary" href="<c:url value='/admin/reports/from'/>" role="button">Ez Origens!</a></p>
        </div>
-        <div class="col-lg-3">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-3">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-lg-4">
+          <h2>Viagens</h2>
+          <p>Saiba quais roteiros são os mais procurados aqui!</p>
+          <p><a class="btn btn-primary" href="<c:url value='/admin/reports/travels'/>" role="button">Ez Viagens!</a></p>
         </div>
       </div>
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Eztrip.co 2013</p>
       </div>
 
     </div> <!-- /container -->

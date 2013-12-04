@@ -92,7 +92,7 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">Admin Ez Trip</h3>
         <ul class="nav nav-justified">
           <li><a href="<c:url value='/admin'/>">Home</a></li>
           <li><a href="<c:url value='/admin/region'/>">Regiões</a></li>
@@ -116,10 +116,11 @@
                         <div class="form-group">
                           <input type="Date" placeholder="Data Ida" name="dataIda" class="form-control">
                         </div>
+                        <label>a</label>
                         <div class="form-group">
                           <input type="Date" placeholder="Data Volta" name="dataVolta" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-success">Gerar!</button>
+                        <button type="submit" class="btn btn-success">Ez!</button>
                      </form>
                 </div>
             </div>
@@ -130,7 +131,7 @@
         </div>
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Eztrip.co 2013</p>
       </div>
 
     </div> <!-- /container -->
