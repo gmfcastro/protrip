@@ -66,6 +66,13 @@ public class TravelController{
         result.include("session", userSession.getTraveler());
     }
     
+    @Path("/explore/{id}")
+    public void explore(Long id){
+        Travel t = dao.findById(id);
+        result.include("viagem",t);
+        result.include("session", userSession.getTraveler());
+    }
+    
     @Post("/save")
     public void save(Travel travel, Long fromandtoIdFrom, Long fromandtoIdDest){
         
